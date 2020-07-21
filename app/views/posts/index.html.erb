@@ -1,0 +1,9 @@
+<h1>Posts#index</h1>
+<p>Find me in app/views/posts/index.html.erb</p>
+<div>
+  <%= form_tag(import_post_data_posts_path, { class: "form", method: "post", multipart: true }) do %>
+    <%= file_field_tag :txt %>
+    <%= submit_tag "导入Data", class: "" %>
+  <% end -%>
+</div>
+

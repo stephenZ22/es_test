@@ -1,3 +1,11 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+  root 'posts#index'
+
+  resources :posts do
+    collection do
+      post :import_post_data
+      get  :import_post_data
+    end
+  end
 end
