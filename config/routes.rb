@@ -8,4 +8,8 @@ Rails.application.routes.draw do
       get  :import_post_data
     end
   end
+  resources :search do
+    post :search, on: :collection
+    get  :search, on: :collection
+  end
 end

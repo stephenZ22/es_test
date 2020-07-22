@@ -1,0 +1,15 @@
+<h1>Search</h1>
+
+<%= form_for search_search_index_path, method: :get do |f| %>
+  <p>
+    <%= f.label "Search for" %>
+    <%= text_field_tag :q, params[:q] %>
+    <%= submit_tag "Go", name: nil %>
+  </p>
+<% end %>
+
+<ul>
+  <% @result.records.each do |post| %>
+    <p><%= post.title %></p>
+  <% end %>
+</ul>
