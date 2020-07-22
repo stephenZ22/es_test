@@ -17,7 +17,6 @@ class Post < ApplicationRecord
  end
 end
 
-#Post.__elasticsearch__.client.indices.delete index: Post.index_name rescue nil
 Post.import force: true
 
 
