@@ -74,17 +74,23 @@ GEM
     concurrent-ruby (1.1.6)
     connection_pool (2.2.3)
     crass (1.0.6)
-    elasticsearch (7.8.0)
-      elasticsearch-api (= 7.8.0)
-      elasticsearch-transport (= 7.8.0)
-    elasticsearch-api (7.8.0)
+    elasticsearch (6.8.2)
+      elasticsearch-api (= 6.8.2)
+      elasticsearch-transport (= 6.8.2)
+    elasticsearch-api (6.8.2)
       multi_json
     elasticsearch-model (7.1.0)
       activesupport (> 3)
       elasticsearch (> 1)
       hashie
+    elasticsearch-persistence (6.1.0)
+      activemodel (> 4)
+      activesupport (> 4)
+      elasticsearch (~> 6)
+      elasticsearch-model (>= 5)
+      hashie
     elasticsearch-rails (7.1.0)
-    elasticsearch-transport (7.8.0)
+    elasticsearch-transport (6.8.2)
       faraday (~> 1)
       multi_json
     erubi (1.9.0)
@@ -220,6 +226,7 @@ DEPENDENCIES
   chromedriver-helper
   coffee-rails (~> 4.2)
   elasticsearch-model
+  elasticsearch-persistence
   elasticsearch-rails
   jbuilder (~> 2.5)
   listen (>= 3.0.5, < 3.2)
