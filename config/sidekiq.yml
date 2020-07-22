@@ -1,7 +1,9 @@
 :concurrency: 5
 :pidfile: tmp/pids/sidekiq.pid
 :logfile: ./log/sidekiq.log
-
+:queues:
+  - default
+  - [import_data_worker, 2]
 development:
   :concurrency: 5
 staging:

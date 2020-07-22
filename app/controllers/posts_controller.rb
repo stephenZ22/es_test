@@ -8,6 +8,7 @@ class PostsController < ApplicationController
       if file_txt
         file_upload_path = File.join(Rails.root, 'public', 'uploads', file_txt.original_filename)
         File.open( file_upload_path, 'wb') { |file| file.write(file_txt.read)}
+        Post.import_data(file_upload_path)
       else
         flash[:alert] = "没有选择文件"
       end

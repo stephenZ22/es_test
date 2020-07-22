@@ -1,12 +1,7 @@
 class Post < ApplicationRecord
  class << self
-
-   def analysis_data_with_file(file)
-    # TODO
-   end
-
-   def import_data()
-     #TODO
+   def import_data(file_path)
+     ImportDataWorker.perform_async(file_path)
    end
  end
 end
